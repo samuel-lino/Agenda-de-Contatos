@@ -1,6 +1,5 @@
-import FiltroCards from '../../components/FiltroCards'
 import Titulo from '../../components/Titulo'
-import { Cabecalho, Filtros } from './style'
+import { Cabecalho } from './style'
 
 const Header = () => {
   return (
@@ -11,11 +10,6 @@ const Header = () => {
           <input type="text"></input>
           <button>Buscar</button>
         </div>
-        <Filtros>
-          <FiltroCards />
-          <FiltroCards />
-          <FiltroCards />
-        </Filtros>
       </Cabecalho>
     </>
   )

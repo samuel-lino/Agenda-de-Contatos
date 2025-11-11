@@ -1,13 +1,14 @@
 import Contato from '../../components/Contato'
+import { Lista } from './style'
 
 const ListaDeContatos = () => {
   return (
     <>
-      <ul>
+      <Lista>
         <Contato />
         <Contato />
         <Contato />
-      </ul>
+      </Lista>
     </>
   )
 }

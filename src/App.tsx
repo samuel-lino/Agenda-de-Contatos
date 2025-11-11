@@ -1,15 +1,17 @@
+import BarraLateral from './containers/BarraLateral'
 import Header from './containers/Header'
 import ListaDeContatos from './containers/ListaDeContatos'
-import EstiloGlobal from './style'
+import EstiloGlobal, { Container } from './style'
 
 function App() {
   return (
     <>
       <EstiloGlobal />
       <Header />
-      <div>
+      <Container>
+        <BarraLateral />
         <ListaDeContatos />
-      </div>
+      </Container>
     </>
   )
 }
