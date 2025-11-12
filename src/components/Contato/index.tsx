@@ -1,18 +1,18 @@
-import { Campo, ContatoCard } from './style'
+import { Campo, ContatoCard, DadosContato } from './style'
 
 const Contato = () => {
   return (
     <>
       <ContatoCard>
         <Campo type="text" value="Samuel Eduardo" />
-        <h4>
+        <DadosContato>
           <span>Telefone:</span>
           <Campo type="text" value="(00)00000-0000" />
-        </h4>
-        <h4>
+        </DadosContato>
+        <DadosContato>
           <span>Email:</span>
           <Campo type="email" value="samuelino2006@hotmail.com" />
-        </h4>
+        </DadosContato>
       </ContatoCard>
     </>
   )

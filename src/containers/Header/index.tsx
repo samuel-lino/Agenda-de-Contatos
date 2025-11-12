@@ -1,5 +1,5 @@
 import Titulo from '../../components/Titulo'
-import { Cabecalho } from './style'
+import { Cabecalho, Pesquisar } from './style'
 
 const Header = () => {
   return (
@@ -7,8 +7,7 @@ const Header = () => {
       <Cabecalho>
         <Titulo>Agenda De contatos</Titulo>
         <div>
-          <input type="text"></input>
-          <button>Buscar</button>
+          <Pesquisar type="text" placeholder="Pesquisar" />
         </div>
       </Cabecalho>
     </>

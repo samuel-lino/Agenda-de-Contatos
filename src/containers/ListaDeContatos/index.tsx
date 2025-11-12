@@ -1,14 +1,23 @@
 import Contato from '../../components/Contato'
+import { ListaContainer } from '../../style'
 import { Lista } from './style'
 
 const ListaDeContatos = () => {
   return (
     <>
-      <Lista>
-        <Contato />
-        <Contato />
-        <Contato />
-      </Lista>
+      <ListaContainer>
+        <Lista>
+          <Contato />
+          <Contato />
+          <Contato />
+          <Contato />
+          <Contato />
+          <Contato />
+          <Contato />
+          <Contato />
+          <Contato />
+        </Lista>
+      </ListaContainer>
     </>
   )
 }
