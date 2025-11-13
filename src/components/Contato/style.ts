@@ -11,11 +11,15 @@ export const ContatoCard = styled.li`
 export const Campo = styled.input`
   background-color: transparent;
   border: none;
-  interactivity: inert;
   font-size: 24px;
   font-weight: bold;
   width: 100%;
   border-radius: 16px;
+  &[disabled] {
+    opacity: 1;
+    cursor: not-allowed;
+    color: inherit !important;
+  }
 `
 export const DadosContato = styled.h4`
   font-size: 24px;
