@@ -7,6 +7,8 @@ export const ContatoCard = styled.li`
   padding: 8px;
   background-color: #ade;
   width: 420px;
+  font-size: 24px;
+  font-weight: bold;
 `
 export const Campo = styled.input`
   background-color: transparent;
@@ -27,4 +29,30 @@ export const DadosContato = styled.h4`
   border: solid 0.5px rgba(0, 0, 0, 0.5);
   padding: 4px;
   border-radius: 16px;
+`
+export const Grupostexto = styled.label`
+  font-size: 12px;
+  margin: 8px;
+`
+export const Gruposinput = styled.input`
+  margin: 4px;
+`
+export const Botao = styled.button`
+  border-radius: 12px;
+  margin: 8px;
+  padding: 4px;
+  color: #fff;
+  border: none;
+`
+
+export const BotaoSalvar = styled(Botao)`
+  background-color: green;
+  color: #fff;
+`
+
+export const BotaoEditar = styled(Botao)`
+  background-color: orange;
+`
+export const BotaoCancelarRemover = styled(Botao)`
+  background-color: red;
 `

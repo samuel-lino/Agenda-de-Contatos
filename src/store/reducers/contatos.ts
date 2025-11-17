@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import Contato from '../../models/Contato'
 import * as enums from '../../utils/enum/contato'
 
@@ -34,5 +34,21 @@ const initialState: contatosstate = {
 const ContatosSlice = createSlice({
   name: 'contatos',
   initialState,
-  reducers: {}
+  reducers: {
+    salvar: (state, action: PayloadAction<Contato>) => {
+      const conattoid = state.itens.findIndex((c) => c.id === action.payload.id)
+      console.log(conattoid)
+
+      if (conattoid >= 0) {
+        state.itens[conattoid] = action.payload
+        console.log(state.itens[conattoid].grupos)
+      }
+    },
+    remover: (state, action: PayloadAction<number>) => {
+      state.itens = state.itens.filter((c) => c.id !== action.payload)
+    }
+  }
 })
+
+export const { salvar, remover } = ContatosSlice.actions
+export default ContatosSlice.reducer
