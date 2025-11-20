@@ -1,6 +1,15 @@
 import { FormEvent, useState } from 'react'
 import * as enums from '../../utils/enum/contato'
-import { Formulario, Modal, Modalprincipal } from './style'
+import {
+  Botaoadicionar,
+  BotaoCancelar,
+  Botoes,
+  Campos,
+  Formulario,
+  GruposLista,
+  Modal,
+  Modalprincipal
+} from './style'
 import { useDispatch } from 'react-redux'
 import { adicionar } from '../../store/reducers/contatos'
 
@@ -45,37 +54,41 @@ const ModalNovoContato = ({ onClose, aberto }: Props) => {
         <Modal>
           <h2>Novo Contato</h2>
           <Formulario>
-            <input
+            <Campos
               type="text"
               onChange={(e) => setnome(e.target.value)}
               placeholder="Nome"
             />
-            <input
+            <Campos
               type="tel"
               onChange={(e) => settel(e.target.value)}
               placeholder="Telefone"
             />
-            <input
+            <Campos
               type="email"
               onChange={(e) => setemail(e.target.value)}
               placeholder="E-mail"
             />
-            {Object.values(enums.grupos).map((g) => (
-              <label key={g}>
-                <input
-                  type="checkbox"
-                  checked={grupos.includes(g)}
-                  onChange={() => alternarGrupo(g)}
-                />
-                {g}
-              </label>
-            ))}
-            <button onClick={onClose}>
-              <span className="material-icons">close</span>
-            </button>
-            <button onClick={cadastrar}>
-              <span className="material-icons">check</span>
-            </button>
+            <GruposLista>
+              {Object.values(enums.grupos).map((g) => (
+                <label key={g}>
+                  <input
+                    type="checkbox"
+                    checked={grupos.includes(g)}
+                    onChange={() => alternarGrupo(g)}
+                  />
+                  {g}
+                </label>
+              ))}
+            </GruposLista>
+            <Botoes>
+              <Botaoadicionar onClick={cadastrar}>
+                <span className="material-icons">check</span>
+              </Botaoadicionar>
+              <BotaoCancelar onClick={onClose}>
+                <span className="material-icons">close</span>
+              </BotaoCancelar>
+            </Botoes>
           </Formulario>
         </Modal>
       </Modalprincipal>

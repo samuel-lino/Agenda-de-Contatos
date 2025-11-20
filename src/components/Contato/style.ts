@@ -5,7 +5,7 @@ export const ContatoCard = styled.li`
   margin-bottom: 16px;
   border-radius: 24px;
   padding: 8px;
-  background-color: #ade;
+  background-color: #c5e9f7ff;
   width: 420px;
   font-size: 24px;
   font-weight: bold;

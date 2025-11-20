@@ -10,7 +10,7 @@ export const Cabecalho = styled.header`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 16px;
   border-radius: 8px;
-  background-color: #ade;
+  background-color: #c5e9f7ff;
 `
 export const Pesquisar = styled.input`
   width: 30vw;

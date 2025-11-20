@@ -55,16 +55,20 @@ const ContatosSlice = createSlice({
       if (contatoexiste) {
         alert('Um contato com este nome já existe!')
       } else {
-        let nId = 1
-        const ids = state.itens.map((c) => c.id)
-        while (ids.includes(nId)) {
-          nId += 1
+        if (action.payload.nome.length > 2) {
+          let nId = 1
+          const ids = state.itens.map((c) => c.id)
+          while (ids.includes(nId)) {
+            nId += 1
+          }
+          const novoContato = {
+            ...action.payload,
+            id: nId
+          }
+          state.itens.push(novoContato)
+        } else {
+          alert('É nescessari ter um nome para criar um novo contato!')
         }
-        const novoContato = {
-          ...action.payload,
-          id: nId
-        }
-        state.itens.push(novoContato)
       }
     }
   }

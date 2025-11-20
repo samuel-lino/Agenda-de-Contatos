@@ -8,7 +8,7 @@ const EstiloGlobal = createGlobalStyle`
     list-style: none
   }
   body{
-    background-color: #9ab4dbff;
+    background-color: #d4d8dbff;
   }
 `
 
