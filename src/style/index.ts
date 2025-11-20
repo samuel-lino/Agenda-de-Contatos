@@ -23,4 +23,24 @@ export const ListaContainer = styled.main`
   overflow-y: scroll;
 `
 
+export const Botaocadastrar = styled.button`
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #0ac50ae5;
+  width: 76px;
+  height: 76px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 4px;
+  border: none;
+  span {
+    width: 48px;
+    height: 48px;
+    font-size: 48px;
+  }
+`
+
 export default EstiloGlobal

@@ -46,9 +46,29 @@ const ContatosSlice = createSlice({
     },
     remover: (state, action: PayloadAction<number>) => {
       state.itens = state.itens.filter((c) => c.id !== action.payload)
+    },
+    adicionar: (state, action: PayloadAction<Omit<Contato, 'id'>>) => {
+      const contatoexiste = state.itens.find(
+        (c) =>
+          c.nome.toLocaleLowerCase() === action.payload.nome.toLocaleLowerCase()
+      )
+      if (contatoexiste) {
+        alert('Um contato com este nome já existe!')
+      } else {
+        let nId = 1
+        const ids = state.itens.map((c) => c.id)
+        while (ids.includes(nId)) {
+          nId += 1
+        }
+        const novoContato = {
+          ...action.payload,
+          id: nId
+        }
+        state.itens.push(novoContato)
+      }
     }
   }
 })
 
-export const { salvar, remover } = ContatosSlice.actions
+export const { salvar, remover, adicionar } = ContatosSlice.actions
 export default ContatosSlice.reducer
